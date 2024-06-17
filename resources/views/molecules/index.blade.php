@@ -15,13 +15,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="dark:bg-gray-800 bg-white  shadow-sm sm:rounded-lg z-index: 9999;">
                 <div class="p-6 dark:text-gray-100 text-gray-900 ">
-                    <div class="flex items-center mb-4 justify-end">
+                    @if ($admin && !request()->query())
+                        <div class="flex items-center mb-4 justify-end">
 
-                        <a href="{{ route('molecules.create') }}">
-                            <x-primary-button>{{ __('messages.Add') }}</x-primary-button>
-                        </a>
+                            <a href="{{ route('molecules.create') }}">
+                                <x-primary-button>{{ __('messages.Add') }}</x-primary-button>
+                            </a>
 
-                    </div>
+                        </div>
+                    @endif
                     @if ($molecules && count($molecules) > 0)
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

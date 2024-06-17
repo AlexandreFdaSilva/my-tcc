@@ -17,15 +17,13 @@
                         {{ ucfirst(__('messages.Search')) }}
                     </x-nav-link>
 
-                    @if (Auth::user()->isAdministrator())
-                        <x-nav-link :href="route('molecules.index')" :active="request()->routeIs('molecules.index')">
-                            {{ ucfirst(__('messages.molecules')) }}
-                        </x-nav-link>
+                    <x-nav-link :href="route('molecules.index')" :active="request()->routeIs('molecules.index')">
+                        {{ ucfirst(__('messages.molecules')) }}
+                    </x-nav-link>
 
-                        <x-nav-link :href="route('plants.index')" :active="request()->routeIs('plants.index')">
-                            {{ ucfirst(__('messages.plants')) }}
-                        </x-nav-link>
-                    @endif
+                    <x-nav-link :href="route('plants.index')" :active="request()->routeIs('plants.index')">
+                        {{ ucfirst(__('messages.plants')) }}
+                    </x-nav-link>
 
                     <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
                         {{ ucfirst(__('messages.About us')) }}
@@ -142,15 +140,13 @@
             <x-responsive-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
                 {{ ucfirst(__('messages.About us')) }}
             </x-responsive-nav-link>
-            @if (Auth::user()->isAdministrator())
-                <x-responsive-nav-link :href="route('molecules.index')" :active="request()->routeIs('molecules.index')">
-                    {{ ucfirst(__('messages.molecules')) }}
-                </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('molecules.index')" :active="request()->routeIs('molecules.index')">
+                {{ ucfirst(__('messages.molecules')) }}
+            </x-responsive-nav-link>
 
-                <x-responsive-nav-link :href="route('plants.index')" :active="request()->routeIs('plants.index')">
-                    {{ ucfirst(__('messages.plants')) }}
-                </x-responsive-nav-link>
-            @endif
+            <x-responsive-nav-link :href="route('plants.index')" :active="request()->routeIs('plants.index')">
+                {{ ucfirst(__('messages.plants')) }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

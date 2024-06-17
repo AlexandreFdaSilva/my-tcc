@@ -19,8 +19,6 @@ class PlantsController extends Controller {
      */
     public function index() {
         $plants = Plant::orderBy('species', 'asc')->paginate(20);
-        // $plants = Plant::search(request(key: 'search'))->paginate(20); // With search
-
         $user = User::find(Auth::user()->id);
         $userIsAdmin = $user->isAdministrator();
 

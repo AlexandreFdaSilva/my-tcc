@@ -20,9 +20,12 @@ class MoleculeController extends Controller {
      */
     public function index() {
         $mol = Molecule::paginate(20);
+        $user = User::find(Auth::user()->id);
+        $userIsAdmin = $user->isAdministrator();
 
         return view('molecules.index', [
             'molecules' => $mol,
+            'admin' => $userIsAdmin,
         ]);
     }
 
