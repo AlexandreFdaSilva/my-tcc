@@ -1,0 +1,2 @@
+Start: net start mysql83
+Shutdown: net stop mysql83
