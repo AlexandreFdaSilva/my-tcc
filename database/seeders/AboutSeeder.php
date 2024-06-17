@@ -12,8 +12,8 @@ class AboutSeeder extends Seeder {
      */
     public function run(): void {
         About::create([
-            'title' => 'Sobre a gente',
-            'summary' => 'Resumo sobre a gente',
+            'title' => 'Sobre nós',
+            'summary' => 'Resumo sobre nós',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

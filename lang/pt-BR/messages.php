@@ -8,7 +8,7 @@ return [
     "profile" => "meu perfil",
     "log out" => "sair",
     "Tools" => "Ferramentas",
-    "About us" => "Sobre a gente",
+    "About us" => "Sobre nós",
 
     // About us
     "Summary" => "Resumo",
