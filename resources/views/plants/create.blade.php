@@ -191,7 +191,7 @@
 
             <div class="mt-2">
 				<x-input-label for="reference_title" :value="ucfirst(__('messages.Title'))" />
-				<x-text-input name="reference_title-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
+				<x-text-input name="reference_title-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 

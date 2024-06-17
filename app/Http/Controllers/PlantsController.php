@@ -43,9 +43,9 @@ class PlantsController extends Controller {
         $moleculesAndReferencesValidator = [];
         $plantValidator = [
             'species' => 'required|string|max:255',
-            'synonyms' => 'required|string|max:255',
-            'material' => 'required|string|max:255',
-            'geolocation' => 'required|string|max:255',
+            'synonyms' => 'nullable|string|max:255',
+            'material' => 'nullable|string|max:255',
+            'geolocation' => 'nullable|string|max:255',
             'image' => 'nullable|mimes:jpg,png,jpeg|max:10240',
         ];
         $references = [];
@@ -57,10 +57,10 @@ class PlantsController extends Controller {
             if (preg_match('/^(selected_molecules|reference_title|reference_author|reference_doi|reference_pmid)-\d+$/', $key)) {
                 if (preg_match('/^selected_molecules/', $key)) {
                     $molecules[$key] = $value;
-                    $moleculesAndReferencesValidator[$key] = 'required|array|min:0';
+                    $moleculesAndReferencesValidator[$key] = 'nullable|array|min:0';
                 } else {
                     $references[$key] = $value;
-                    $moleculesAndReferencesValidator[$key] = 'required|string|max:255';
+                    $moleculesAndReferencesValidator[$key] = 'nullable|string|max:255';
                 }
             }
         }
