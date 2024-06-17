@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void {
         Schema::table('about', function (Blueprint $table) {
-            $table->string('link')->after('summary');
+            $table->text('summary')->change();
         });
     }
 
@@ -19,7 +19,7 @@ return new class extends Migration {
      */
     public function down(): void {
         Schema::table('about', function (Blueprint $table) {
-            $table->dropColumn('link');
+            $table->string('summary')->change();
         });
     }
 };
