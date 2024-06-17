@@ -67,20 +67,22 @@
                                                         <x-dropdown-link :href="route('molecules.show', [$molecule])">
                                                             {{ ucfirst(__('messages.Details')) }}
                                                         </x-dropdown-link>
-                                                        <x-dropdown-link :href="route('molecules.edit', $molecule)">
-                                                            {{ ucfirst(__('messages.Edit')) }}
-                                                        </x-dropdown-link>
-                                                        <x-dropdown-link href="#"
-                                                            x-on:click.prevent="
+                                                        @if ($admin)
+                                                            <x-dropdown-link :href="route('molecules.edit', $molecule)">
+                                                                {{ ucfirst(__('messages.Edit')) }}
+                                                            </x-dropdown-link>
+                                                            <x-dropdown-link href="#"
+                                                                x-on:click.prevent="
                                                                 const form = document.querySelector('#deleteMoleculeForm');
                                                                 const parts = form.action.split('/');
                                                                 parts[parts.length - 1] = {{ $molecule->id }};
                                                                 const newAction = parts.join('/');
                                                                 form.action = newAction;
                                                                 $dispatch('open-modal', 'confirm-molecule-deletion');"
-                                                            class="rounded-md dark:bg-red-500 bg-red-500 hover:dark:bg-red-600 hover:bg-red-600">
-                                                            {{ ucfirst(__('messages.Delete')) }}
-                                                        </x-dropdown-link>
+                                                                class="rounded-md dark:bg-red-500 bg-red-500 hover:dark:bg-red-600 hover:bg-red-600">
+                                                                {{ ucfirst(__('messages.Delete')) }}
+                                                            </x-dropdown-link>
+                                                        @endif
                                                     </x-slot>
                                                 </x-dropdown>
                                             </td>
