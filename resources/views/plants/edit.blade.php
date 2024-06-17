@@ -280,21 +280,21 @@
                                             <div class="mt-4">
                                                 <x-input-label for="reference_author" :value="ucfirst(__('messages.Author'))" />
                                                 <x-text-input name="reference_author-{{ $sectionIndex }}-original"
-                                                    type="text" class="mt-1 block w-full" required autofocus
+                                                    type="text" class="mt-1 block w-full" autofocus
                                                     autocomplete="off" value="{{ $reference->author }}" />
                                             </div>
 
                                             <div class="mt-4">
                                                 <x-input-label for="reference_doi" :value="ucfirst(__('messages.DOI'))" />
                                                 <x-text-input name="reference_doi-{{ $sectionIndex }}-original"
-                                                    type="text" class="mt-1 block w-full" required autofocus
+                                                    type="text" class="mt-1 block w-full" autofocus
                                                     autocomplete="off" value="{{ $reference->doi }}" />
                                             </div>
 
                                             <div class="mt-4">
                                                 <x-input-label for="reference_pmid" :value="ucfirst(__('messages.PMID'))" />
                                                 <x-text-input name="reference_pmid-{{ $sectionIndex }}-original"
-                                                    type="text" class="mt-1 block w-full" required autofocus
+                                                    type="text" class="mt-1 block w-full" autofocus
                                                     autocomplete="off" value="{{ $reference->pmid }}" />
                                             </div>
                                         @endif
@@ -465,19 +465,19 @@
 
 			<div class="mt-4">
 				<x-input-label for="reference_author" :value="ucfirst(__('messages.Author'))" />
-				<x-text-input name="reference_author-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_author-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 
 			<div class="mt-4">
 				<x-input-label for="reference_doi" :value="ucfirst(__('messages.DOI'))" />
-				<x-text-input name="reference_doi-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_doi-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 
 			<div class="mt-4">
 				<x-input-label for="reference_pmid" :value="ucfirst(__('messages.PMID'))" />
-				<x-text-input name="reference_pmid-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_pmid-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 		</div>
