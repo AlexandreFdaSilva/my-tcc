@@ -59,21 +59,21 @@
                             <div class="mt-4">
                                 <x-input-label for="synonyms" :value="ucfirst(__('messages.Synonyms'))" />
                                 <x-text-input id="synonyms" name="synonyms" type="text" class="mt-1 block w-full"
-                                    required autofocus autocomplete="synonyms" />
+                                    autofocus autocomplete="synonyms" />
                                 <x-input-error class="mt-2" :messages="$errors->get('name')" />
                             </div>
 
                             <div class="mt-4">
                                 <x-input-label for="material" :value="ucfirst(__('messages.Material'))" />
                                 <x-text-input id="material" name="material" type="text" class="mt-1 block w-full"
-                                    required autofocus autocomplete="material" />
+                                    autofocus autocomplete="material" />
                                 <x-input-error class="mt-2" :messages="$errors->get('name')" />
                             </div>
 
                             <div class="mt-4">
                                 <x-input-label for="geolocation" :value="ucfirst(__('messages.Geolocation'))" />
                                 <x-text-input id="geolocation" name="geolocation" type="text"
-                                    class="mt-1 block w-full" required autofocus autocomplete="geolocation" />
+                                    class="mt-1 block w-full" autofocus autocomplete="geolocation" />
                                 <x-input-error class="mt-2" :messages="$errors->get('name')" />
                             </div>
 
@@ -191,25 +191,25 @@
 
             <div class="mt-2">
 				<x-input-label for="reference_title" :value="ucfirst(__('messages.Title'))" />
-				<x-text-input name="reference_title-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_title-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 
 			<div class="mt-4">
 				<x-input-label for="reference_author" :value="ucfirst(__('messages.Author'))" />
-				<x-text-input name="reference_author-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_author-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 
 			<div class="mt-4">
 				<x-input-label for="reference_doi" :value="ucfirst(__('messages.DOI'))" />
-				<x-text-input name="reference_doi-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_doi-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 
 			<div class="mt-4">
 				<x-input-label for="reference_pmid" :value="ucfirst(__('messages.PMID'))" />
-				<x-text-input name="reference_pmid-${counter}" type="text" class="mt-1 block w-full" required autofocus autocomplete="off" />
+				<x-text-input name="reference_pmid-${counter}" type="text" class="mt-1 block w-full" autofocus autocomplete="off" />
 				<x-input-error class="mt-2" :messages="$errors->get('name')" />
 			</div>
 		</div>
