@@ -12,6 +12,7 @@ return [
 
     // About us
     "Summary" => "Resumo",
+    "Link" => "Link",
 
     // Dashboard
     "You're logged in!" => "Você entrou no sistema!",

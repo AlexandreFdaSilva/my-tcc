@@ -13,6 +13,7 @@ class About extends Model {
 
     protected $fillable = [
         'title',
-        'summary'
+        'summary',
+        'link',
     ];
 }

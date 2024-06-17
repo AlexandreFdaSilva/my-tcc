@@ -28,10 +28,17 @@
                         </div>
 
                         <div>
-                            <x-input-label for="summary" :value="ucfirst(__('messages.summary'))" />
+                            <x-input-label for="summary" :value="ucfirst(__('messages.Summary'))" />
                             <x-text-input id="summary" name="summary" type="text" class="mt-1 block w-full"
                                 required autofocus autocomplete="summary" value="{{ $about->summary }}" />
                             <x-input-error class="mt-2" :messages="$errors->get('summary')" />
+                        </div>
+
+                        <div>
+                            <x-input-label for="link" :value="ucfirst(__('messages.Link'))" />
+                            <x-text-input id="link" name="link" type="text" class="mt-1 block w-full"
+                                required autofocus autocomplete="link" value="{{ $about->link }}" />
+                            <x-input-error class="mt-2" :messages="$errors->get('link')" />
                         </div>
 
                         <div class="flex items-center gap-4">

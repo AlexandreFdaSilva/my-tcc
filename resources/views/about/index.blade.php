@@ -17,10 +17,16 @@
                         </div>
                     @endif
                     <p class="text-center text-2xl">{{ $about->title }}</p>
+
                     <br />
-                    <p>
-                        {{ $about->summary }}
+
+                    <p class="text-justify">
+                        {!! nl2br(e(str_replace('\n', "\n", $about->summary))) !!}
                     </p>
+
+                    <br />
+
+                    <a href="{{ $about->link }}" target="_blank">{{ $about->link }}</a>
                 </div>
             </div>
         </div>
