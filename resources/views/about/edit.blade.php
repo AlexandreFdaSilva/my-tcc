@@ -36,8 +36,9 @@
 
                         <div>
                             <x-input-label for="link" :value="ucfirst(__('messages.Link'))" />
-                            <x-text-input id="link" name="link" type="text" class="mt-1 block w-full"
-                                required autofocus autocomplete="link" value="{{ $about->link }}" />
+                            <textarea id="summary" name="summary" rows="5"
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
+                                required autofocus autocomplete="summary">{{ $about->summary }}</textarea>
                             <x-input-error class="mt-2" :messages="$errors->get('link')" />
                         </div>
 

@@ -56,7 +56,7 @@ class AboutController extends Controller {
 
         $validatedData = $request->validate([
             'title' => 'string|max:255',
-            'summary' => 'string|max:4096',
+            'summary' => 'string|max:16000',
             'link' => 'string|max:255',
         ]);
 

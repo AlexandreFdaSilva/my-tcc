@@ -21,7 +21,7 @@
                     <br />
 
                     <p class="text-justify">
-                        {!! nl2br(e(str_replace('\n', "\n", $about->summary))) !!}
+                        {!! nl2br(e($about->summary)) !!}
                     </p>
 
                     <br />
