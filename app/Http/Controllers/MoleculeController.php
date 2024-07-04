@@ -215,7 +215,7 @@ class MoleculeController extends Controller {
             }
             $cid = trim($response->body());
 
-            $sdfUrl = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/{$cid}/SDF?record_type=2d&response_type=save&response_basename={$molecule->name}-2D";
+            $sdfUrl = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/{$cid}/SDF?record_type=2d&response_type=save&response_basename={$molecule->name} 2D";
             return redirect($sdfUrl);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
@@ -234,7 +234,7 @@ class MoleculeController extends Controller {
             }
             $cid = trim($response->body());
 
-            $sdfUrl = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/{$cid}/SDF?record_type=3d&response_type=save&response_basename={$molecule->name}-2D";
+            $sdfUrl = "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/CID/{$cid}/SDF?record_type=3d&response_type=save&response_basename={$molecule->name} 3D";
             return redirect($sdfUrl);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
@@ -259,7 +259,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-2D.json", ['Content-Type' => 'application/json']);
+            }, "{$molecule->name} 2D.json", ['Content-Type' => 'application/json']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -283,7 +283,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-3D.json", ['Content-Type' => 'application/json']);
+            }, "{$molecule->name} 3D.json", ['Content-Type' => 'application/json']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -307,7 +307,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-2D.xml", ['Content-Type' => 'application/xml']);
+            }, "{$molecule->name} 2D.xml", ['Content-Type' => 'application/xml']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -330,7 +330,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-3D.xml", ['Content-Type' => 'application/xml']);
+            }, "{$molecule->name} 3D.xml", ['Content-Type' => 'application/xml']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -353,7 +353,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-2D.asnt", ['Content-Type' => 'application/asnt']);
+            }, "{$molecule->name} 2D.asnt", ['Content-Type' => 'application/asnt']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
@@ -376,7 +376,7 @@ class MoleculeController extends Controller {
 
             return response()->streamDownload(function () use ($jsonContent) {
                 echo $jsonContent;
-            }, "{$molecule->name}-2D.asnt", ['Content-Type' => 'application/asnt']);
+            }, "{$molecule->name} 3D.asnt", ['Content-Type' => 'application/asnt']);
         } catch (\Throwable $e) {
             return response()->json(['error' => $e->getMessage()], 404);
         }
